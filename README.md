@@ -12,8 +12,6 @@ To Develop a python program to Plot a time series data (population/ market price
 4. Plot the data according to need and can be altered monthly, or yearly.
 5. Display the graph.
 # PROGRAM:
-
-
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -42,9 +40,7 @@ plt.legend()
 # Display the plot
 plt.show()
 
-
 ```
-
 # OUTPUT:
 <img width="1252" height="728" alt="image" src="https://github.com/user-attachments/assets/67d9de4d-78f3-40f6-a4cd-ee241c0a226c" />
 
