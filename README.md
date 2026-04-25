@@ -55,10 +55,5 @@ plt.show()
 # OUTPUT:
 <img width="1252" height="728" alt="image" src="https://github.com/user-attachments/assets/67d9de4d-78f3-40f6-a4cd-ee241c0a226c" />
 
-
-
-
-
-
 # RESULT:
 Thus we have created the python code for plotting the time series of given data.
