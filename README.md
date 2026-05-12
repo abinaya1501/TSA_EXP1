@@ -1,8 +1,8 @@
 # Ex.No: 01A PLOT A TIME SERIES DATA
-###  Date: 24 . 04. 2026
-## Name : ABINAYA A
-## Reg no : 212224230004
+###  Date: 22.04.2026
+
 # AIM:
+#### Dataset: Video_Games_Sales
 To Develop a python program to Plot a time series data (population/ market price of a commodity
 /temperature.
 # ALGORITHM:
@@ -12,37 +12,31 @@ To Develop a python program to Plot a time series data (population/ market price
 4. Plot the data according to need and can be altered monthly, or yearly.
 5. Display the graph.
 # PROGRAM:
+
 ```
+from matplotlib import pyplot as plt
 import pandas as pd
-import matplotlib.pyplot as plt
 
-# Load the CSV file
-file_path = 'Gold Price Prediction.csv'  # Replace with your file path
-data = pd.read_csv(file_path)
+df = pd.read_csv("/content/Video_Games_Sales.csv")
 
-# Convert 'Date' column to datetime format
-data['Date'] = pd.to_datetime(data['Date'])
+print(df.head())
 
-# Set 'Date' as the index
-data.set_index('Date', inplace=True)
+print(df.dtypes)
 
-# Plot the time series of 'Price Today'
-plt.figure(figsize=(10, 6))
-plt.plot(data.index, data['Price Today'], label='Gold Price Today', color='blue')
+plt.title('Time Series Plot of Video Game Global Sales')
+plt.xlabel('Year')
+plt.ylabel('Global Sales (Millions)')
 
-# Customize the plot
-plt.title('Gold Price Today Over Time')
-plt.xlabel('Date')
-plt.ylabel('Gold Price')
-plt.grid(True)
+plt.plot(df['Year_of_Release'], df['Global_Sales'], label = 'Global Sales')
 plt.legend()
-
-# Display the plot
+plt.grid(True)
 plt.show()
-
 ```
+
 # OUTPUT:
-<img width="1252" height="728" alt="image" src="https://github.com/user-attachments/assets/67d9de4d-78f3-40f6-a4cd-ee241c0a226c" />
+
+<img width="704" height="518" alt="Screenshot 2026-04-22 111124" src="https://github.com/user-attachments/assets/58b71534-46e2-4a9d-a040-407a99881368" />
+
 
 # RESULT:
 Thus we have created the python code for plotting the time series of given data.
